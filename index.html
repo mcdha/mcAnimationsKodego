@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="background">
+
+        <div id="female-box">
+            <img id="female-image" src="imagesAnimate/female.png" alt="female" srcset="">
+        </div>
+        <div id="headline1-box">
+            <img id="headline1-image" src="imagesAnimate/headline1.png" alt="" srcset="">
+        </div> 
+        <div id="headline2-box">
+            <img id="headline2-image" src="imagesAnimate/headline2.png" alt="" srcset="">
+        </div>
+        <div id="subheadline-box">
+            <img id="subheadline-image" src="imagesAnimate/subheadline.png" alt="female" srcset="">
+        </div>
+        <div id="learnmore-box">
+            <img id="learnmore-image" src="imagesAnimate/learnmore.png" alt="female" srcset="">
+        </div>
+        <div id="logo-box">
+            <img id="logo-image" src="imagesAnimate/logo.png" alt="" srcset="">
+        </div>
+        <div id="replay-box">
+            <img onclick="refresh()" id="refresh" class="replay-image" src="imagesAnimate/replay.png" alt="" srcset="">
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+
+window.addEventListener('DOMContentLoaded', function() {
+  var element = document.getElementById('female-box');
+  var fadeInDuration = 1000;
+  element.style.opacity = 0;
+  setTimeout(function() {
+    element.style.opacity = 1;
+  }, fadeInDuration);
+  setTimeout(function() {
+    element.style.opacity = 0;
+  }, 3000);
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  var element = document.getElementById('headline1-box');
+  var slideInDuration = 1500; 
+  var slideOutDuration = 2700;
+  element.style.left = '-100%';
+  setTimeout(function() {
+    element.style.left = '0';
+  setTimeout(function() {
+      element.style.left = '-100%';
+    }, slideOutDuration);
+  }, slideInDuration);
+
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  var element = document.getElementById('headline2-box');
+  var slideInDuration = 3500; 
+  element.style.right = '-100%';
+  setTimeout(function() {
+    element.style.right = '0';
+  }, slideInDuration);
+
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  var element = document.getElementById('subheadline-box');
+  var fadeInDuration = 5000;
+  element.style.opacity = 0;
+  setTimeout(function() {
+    element.style.opacity = 1;
+  }, fadeInDuration);
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  var element = document.getElementById('learnmore-box');
+  var fadeInDuration = 5500;
+  element.style.opacity = 0;
+  setTimeout(function() {
+    element.style.opacity = 1;
+  }, fadeInDuration);
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  var element = document.getElementById('logo-box');
+  var slideInDuration = 6000; 
+  element.style.left = '-100%';
+  setTimeout(function() {
+    element.style.left = '0';
+  }, slideInDuration);
+
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  var element = document.getElementById('replay-box');
+  var fadeInDuration = 6500;
+  element.style.opacity = 0;
+  setTimeout(function() {
+    element.style.opacity = 1;
+  }, fadeInDuration);
+});
+
+function refresh() {
+    location.reload();
+}
+
+
+</script>
+
+</html>
